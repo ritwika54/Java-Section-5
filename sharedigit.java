@@ -1,4 +1,4 @@
-public class Test {
+public class sharedigit {
     public static void main(String[] args) {
 
         System.out.println(hasSameLastDigit(41, 22, 71));
