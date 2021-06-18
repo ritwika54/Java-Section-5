@@ -1,0 +1,28 @@
+public class flourpack {
+    public static void main(String[] args) {
+        System.out.println(" Result: " + canPack(2, 0, 9)); 
+        System.out.println(" Result: " + canPack(1, 5, 9)); 
+        System.out.println(" Result: " + canPack(1, 8, 9)); 
+        System.out.println(" Result: " + canPack(1, 0, 5)); 
+        System.out.println(" Result: " + canPack(2, 3, 8)); 
+       
+
+    public static boolean canPack(int bigCount, int smallCount, int goal) {
+
+        if ((bigCount < 0) || (smallCount < 0) || (goal < 0)) {
+            return false;
+        }
+
+        // bigCount = 5 kilos
+        // smallCount = 1 kilo
+
+        int bigBags = bigCount * 5;
+        int sum = bigBags + smallCount;
+        int leftOver = goal % 5;
+
+        if(sum < goal) {
+            return false;
+        }
+        return smallCount >= leftOver;
+    }
+}
